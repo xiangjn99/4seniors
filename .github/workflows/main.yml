@@ -1,17 +1,17 @@
-name: Windows –Lifemanager
-  on:
+name: Windows – Lifemanager
+on:
     workflow_dispatch:
 
-  jobs:
-    build:
-    name: Start Building
-    runs-on: window-latest
+jobs:
+  build:
+  name: Start Building
+  runs-on: window-latest
 
-steps:
+  steps:
   - name: Downloading & installing Essentials
     run: |
-    Invoke-WEBRequest Url "https://gitlab.com/chamod12/Im_win-10_github_rdp/-/raw/main/Downloads.bat" -OutFile "Downloads.bat"
-    cmd /c Downloads.bat
+      Invoke-WEBRequest Url "https://gitlab.com/chamod12/Im_win-10_github_rdp/-/raw/main/Downloads.bat" -OutFile "Downloads.bat"
+      cmd /c Downloads.bat
 
   - name: Connect to Lifemanager
     run: cmd /c show.bat
